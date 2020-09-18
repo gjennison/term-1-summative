@@ -570,6 +570,12 @@ nav .container .burger div {
   margin-left: 4px;
 }
 
+@media only screen and (max-width: 800px) {
+  .payment .container .payment-content {
+    width: 90%;
+  }
+}
+
 @media only screen and (max-width: 430px) {
   .payment .container .payment-content {
     max-width: 90%;
