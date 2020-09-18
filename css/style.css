@@ -571,6 +571,9 @@ nav .container .burger div {
 }
 
 @media only screen and (max-width: 430px) {
+  .payment .container .payment-content {
+    max-width: 90%;
+  }
   .payment .container .payment-content .payment-buttons {
     display: -webkit-box;
     display: -ms-flexbox;
