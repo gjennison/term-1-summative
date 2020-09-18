@@ -47,6 +47,7 @@ const svg = document.querySelector("svg");
 const payment = document.querySelector(".payment");
 const overlay = document.querySelector(".overlay");
 const totalElement = document.querySelector(".payment-content span");
+const closeButton = document.querySelector(".payment-buttons button:first-child");
 
 function insertItems(array, object) {
   for (let index = 0; index < array.length; index++) {
@@ -142,5 +143,5 @@ function checkout() {
 }
 
 function hideCheckout(event) {
-  if (event.target === overlay) payment.style.display = "none";
+  if (event.target === overlay || event.target === closeButton) payment.style.display = "none";
 }

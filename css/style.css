@@ -1,36 +1,3 @@
-body {
-  background: aliceblue;
-  margin: 0;
-  font-family: sans-serif;
-  scroll-behavior: smooth;
-}
-
-section {
-  padding-top: 40px;
-  padding-bottom: 60px;
-}
-
-@media screen and (min-width: 810px) {
-  .container {
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  .container {
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-}
-
-@media screen and (min-width: 1210px) {
-  .container {
-    margin-left: 20%;
-    margin-right: 20%;
-  }
-}
-
 nav {
   background-color: rgba(255, 152, 25, 0.7);
   position: fixed;
@@ -74,6 +41,7 @@ nav .container .links a:visited {
 nav .container .burger {
   margin-right: 20px;
   display: none;
+  cursor: pointer;
 }
 
 nav .container .burger:hover div {
@@ -279,6 +247,10 @@ nav .container .burger div {
   position: absolute;
 }
 
+#starter {
+  padding-top: 120px;
+}
+
 #location .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -295,19 +267,6 @@ nav .container .burger div {
 
 #location .container iframe {
   border-radius: 20px;
-}
-
-.secondary-section {
-  background-color: rgba(0, 134, 200, 0.3);
-}
-
-.secondary-section .item {
-  background-color: #00537a;
-  color: white;
-}
-
-#starter {
-  padding-top: 120px;
 }
 
 #contact {
@@ -491,12 +450,19 @@ nav .container .burger div {
 
 .payment .container {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .payment .container .payment-content {
   background-color: aliceblue;
   padding: 2.5% 8%;
   border-radius: 8px;
+  max-width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -524,7 +490,28 @@ nav .container .burger div {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 2%;
+  font-size: 1.2em;
+}
+
+.payment .container .payment-content .forms form label {
+  width: 200px;
+}
+
+.payment .container .payment-content .forms form input {
+  font-size: 1.1em;
+}
+
+@media only screen and (max-width: 800px) {
+  .payment .container .payment-content .forms form {
+    font-size: 1em;
+  }
+  .payment .container .payment-content .forms form input {
+    font-size: 1em;
+  }
 }
 
 .payment .container .payment-content button {
@@ -544,5 +531,63 @@ nav .container .burger div {
 .payment .container .payment-content button:hover {
   background-color: #d0db36;
   color: black;
+}
+
+.payment .container .payment-content button:first-child {
+  background-color: crimson;
+  margin-right: 4px;
+}
+
+.payment .container .payment-content button:last-child {
+  margin-left: 4px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: aliceblue;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+section {
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 810px) {
+  .container {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .container {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+@media screen and (min-width: 1210px) {
+  .container {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+
+.secondary-section {
+  background-color: rgba(0, 134, 200, 0.5);
+}
+
+.secondary-section .item {
+  background-color: #00537a;
+  color: white;
+}
+
+button {
+  outline: none;
 }
 /*# sourceMappingURL=style.css.map */

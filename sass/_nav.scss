@@ -1,0 +1,112 @@
+nav {
+	background-color: $navbar-bg;
+	position: fixed;
+	top: 0;
+	z-index: 1;
+	width: 100%;
+	.container {
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: center;
+  
+	  .links {
+		a {
+		  text-decoration: none;
+		  font-size: 1.8em;
+		  padding: 16px;
+		  border-radius: 5%;
+		}
+		a:link {
+		  color: $link-color;
+		}
+		a:hover {
+		  background-color: $primary;
+		  color: $link-hover;
+		}
+		a:visited {
+		  color: $link-color;
+		}
+	  }
+  
+	  .burger {
+		margin-right: 20px;
+		display: none;
+		cursor: pointer;
+  
+		&:hover {
+		  div {
+			background-color: lightgrey;
+		  }
+		}
+		div {
+		  width: 60px;
+		  height: 8px;
+		  margin-top: 8px;
+		  margin-bottom: 8px;
+		  border-radius: 8px;
+		  background-color: aliceblue;
+		}
+	  }
+  
+	  @media screen and (max-width: $phone) {
+		.links {
+		  display: none;
+		}
+		.burger {
+		  display: block;
+		}
+	  }
+	}
+  }
+  
+  .burger-links {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: $burger-bg;
+	height: 0px;
+	overflow: hidden;
+	a {
+	  text-decoration: none;
+	  font-size: 1.5em;
+	  padding: 16px;
+	  width: 100%;
+	  text-align: center;
+	  background-color: $burger-bg;
+	}
+	a:link {
+	  color: $burger-color;
+	}
+	a:hover {
+	  background-color: $burger-hover-bg;
+	  color: $burger-hover-color;
+	}
+	a:visited {
+	  color: $burger-hover-color;
+	}
+  }
+  
+  .burger-expand {
+	animation: burger-expand 0.8s forwards;
+  }
+  
+  .burger-shrink {
+	animation: burger-shrink 0.8s forwards;
+  }
+  
+  @keyframes burger-expand {
+	from {
+	  height: 0px;
+	}
+	to {
+	  height: 180px;
+	}
+  }
+  @keyframes burger-shrink {
+	from {
+	  height: 180px;
+	}
+	to {
+	  height: 0px;
+	}
+  }

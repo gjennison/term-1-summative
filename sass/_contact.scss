@@ -1,0 +1,19 @@
+#contact {
+	background-color: $contact-bg;
+	color: white;
+	text-align: center;
+  
+	p {
+	  font-size: 1.5em;
+	  cursor: pointer;
+  
+	  i {
+		padding-left: 8px;
+	  }
+  
+	  &:hover {
+		color: gold;
+	  }
+	}
+  }
+  
