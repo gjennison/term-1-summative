@@ -48,16 +48,27 @@
 			font-size: 1.2em;
   
 			label{
-			  width: 200px;
+				width: 100%;
+			  max-width: 200px;
+			  padding: 16px;
 			}
 			input{
 			  font-size: 1.1em;
+			  width: 80%;
 			}
   
 			@media only screen and (max-width: 800px){
 			  font-size: 1em;
+			  flex-direction: column;
+			  justify-content: center;
+			  align-items: center;
+			  text-align: center;
+			  label{
+				  padding-bottom: 0px;
+			  }
 			  input{
 				font-size: 1em;
+				width: 100%;
 			  }
 			}
 		  }
