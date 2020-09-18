@@ -29,6 +29,7 @@
 		padding: 2.5% 8%;
 		border-radius: 8px;
 		max-width: 50%;
+		max-height: 80%;
   
 		display: flex;
 		flex-direction: column;
@@ -71,6 +72,12 @@
 				width: 100%;
 			  }
 			}
+
+			@media only screen and (max-height: 642px){
+				label{
+					padding: 0px;
+				}
+			}
 		  }
 		}
 
@@ -98,6 +105,27 @@
 
 		button:last-child{
 			margin-left: 4px;
+		}
+
+		@media only screen and (max-width: 430px){
+			.payment-buttons{
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+			}
+
+			button{
+				margin-top: 12px;
+			}
+
+			button:first-child{
+				margin-right: 0;
+			}
+			
+			button:last-child{
+				margin-left: 0;
+			}
 		}
 	  }
 	}
