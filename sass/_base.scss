@@ -1,42 +1,42 @@
-html{
-	scroll-behavior: smooth;
-  }
-  
-  body {
-	background: aliceblue;
-	margin: 0;
-	font-family: sans-serif;
-  }
-  
-  section {
-	padding-top: 40px;
-	padding-bottom: 60px;
-  }
-  
-  .container {
-	@media screen and (min-width: $phone) {
-	  margin-left: 5%;
-	  margin-right: 5%;
-	}
-	@media screen and (min-width: $tablet) {
-	  margin-left: 10%;
-	  margin-right: 10%;
-	}
-	@media screen and (min-width: $computer) {
-	  margin-left: 20%;
-	  margin-right: 20%;
-	}
-  }
-
-  .secondary-section {
-	background-color: $section-blue;
-	.item {
-	  background-color: $contact-bg;
-	  color: white;
-	}
-  }
-
-button{
-	outline: none;
+html {
+  scroll-behavior: smooth;
 }
-  
+
+body {
+  background: aliceblue;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+section {
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+.container {
+  @media screen and (min-width: $phone) {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  @media screen and (min-width: $tablet) {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  @media screen and (min-width: $computer) {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+
+.secondary-section {
+  background-color: $section-blue;
+  .item {
+    box-shadow: 0px 0px 4px $contact-bg;
+    background-color: $contact-bg;
+    color: white;
+  }
+}
+
+button {
+  outline: none;
+}

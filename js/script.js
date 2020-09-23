@@ -6,7 +6,6 @@ function expandBurger() {
     burger.classList.remove("burger-shrink");
   }
   burger.classList.toggle("burger-expand");
-  console.log(burger);
 }
 
 var mainItems = [];
@@ -47,26 +46,33 @@ const svg = document.querySelector("svg");
 const payment = document.querySelector(".payment");
 const overlay = document.querySelector(".overlay");
 const totalElement = document.querySelector(".payment-content span");
-const closeButton = document.querySelector(".payment-buttons button:first-child");
+const closeButton = document.querySelector(
+  ".payment-buttons button:first-child"
+);
+const totalCost = document.querySelector(".cart-status span:first-child");
+const itemCount = document.querySelector(".cart-status span:last-child");
+
+var itemInt = 0;
+var costInt = 0;
 
 function insertItems(array, object) {
   for (let index = 0; index < array.length; index++) {
     const element = array[index];
 
     object.innerHTML +=
-      '<div class="item" onclick="addToCart(\'' +
-      element.src +
-      "','" +
-      element.name +
-      "','" +
-      element.price +
-      '\')"><div class="overlay"><i class="fas fa-plus"></i></div><img src=' +
+      '<div class="item"><img src=' +
       element.src +
       ' alt=""><div class="item-title"><h4>' +
       element.name +
       "</h4><p>$" +
       element.price +
-      "</p></div></div>";
+      "</p></div><div class='cart-button'><button onclick='addToCart(\"" +
+      element.src +
+      '","' +
+      element.name +
+      '","' +
+      element.price +
+      "\")'>Buy Now</button></div></div>";
   }
 }
 
@@ -78,7 +84,8 @@ insertItems(dessertItems, dessertMenuItems);
 
 function addToCart(src, name, price) {
   cartItems.push({ src: src, name: name, price: price, id: cartItems.length });
-  console.log(cartItems);
+
+  // console.log(cartItems.length);
 
   cart.style.display = "block";
 
@@ -90,22 +97,38 @@ function addToCart(src, name, price) {
     "</h2><h2>$" +
     price +
     "</h2><button onclick=removeItem(" +
-    cartItems.length +
+    (cartItems.length - 1) +
     ")>X</button></div>";
+
+  itemInt += 1;
+  costInt += parseInt(price);
+  itemCount.innerHTML = itemInt;
+  totalCost.innerHTML = costInt;
 }
 
 function removeItem(id) {
-  console.log(cartItems);
+  var tempCost;
 
-  for (let index = 0; index < cartItems.length; index++) {
-    const element = cartItems[index];
+  if (cartItems.length <= 1) {
+    costInt = 0;
+    itemInt = 0;
+    cartItems = [];
+    cartContent.innerHTML = "";
+  } else {
+    for (let index = 0; index < cartItems.length; index++) {
+      const element = cartItems[index];
 
-    if (element.id === id) {
-      cartItems.splice(index, 1);
+      if (element.id === id) {
+        tempCost = element.price;
+        cartItems.splice(index, 1);
+      }
     }
-  }
 
-  cartContent.innerHTML = "";
+    cartContent.innerHTML = "";
+
+    costInt -= tempCost;
+    itemInt -= 1;
+  }
 
   for (let index = 0; index < cartItems.length; index++) {
     const element = cartItems[index];
@@ -120,6 +143,8 @@ function removeItem(id) {
       element.id +
       ")>X</button></div>";
   }
+  itemCount.innerHTML = itemInt;
+  totalCost.innerHTML = costInt;
 }
 
 function transformCart() {
@@ -143,5 +168,6 @@ function checkout() {
 }
 
 function hideCheckout(event) {
-  if (event.target === overlay || event.target === closeButton) payment.style.display = "none";
+  if (event.target === overlay || event.target === closeButton)
+    payment.style.display = "none";
 }

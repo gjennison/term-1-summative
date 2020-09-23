@@ -1,101 +1,105 @@
-
 .cart {
-	position: fixed;
-	bottom: 0;
-	background-color: $cart-blue;
-	width: 100%;
-	display: none;
-	height: 150px;
-	overflow-y: scroll;
-  
-	color: white;
-  
-	.cart-header {
-	  display: flex;
-	  justify-content: space-between;
-  
-	  button {
-		background-color: #32cd32;
-		border: none;
-		margin: 8px;
-		font-size: 1.5em;
-		color: white;
-		transition: all 0.4s;
-		cursor: pointer;
-		border-radius: 8px;
-  
-		&:hover {
-		  background-color: #d0db36;
-		  color: black;
-		}
-	  }
-  
-	  .expand-cart {
-		margin-top: 6px;
-		border-radius: 8px;
-		transition: all 0.5s;
-		svg {
-		  margin: 4px;
-		  padding: 8px;
-		  border-radius: 8px;
-		  transition: all 0.5s;
-		  line {
-			stroke: white;
-			stroke-width: 4;
-		  }
-		}
-		&:hover {
-		  background-color: $cart-close-hover;
-		}
-	  }
-	}
-  
-	.cart-content {
-	  .cart-item {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin: 8px;
-		img {
-		  height: 100px;
-		  border-radius: 8px;
-		}
-		button {
-		  font-size: 2em;
-		  border-radius: 50%;
-		  border: none;
-		  &:hover {
-			background-color: $cart-close-hover;
-		  }
-		}
-	  }
-	}
+  position: fixed;
+  bottom: 0;
+  background-color: $cart-blue;
+  width: 100%;
+  display: none;
+  height: 150px;
+  overflow-y: scroll;
+
+  color: white;
+
+  .cart-header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .cart-status {
+      font-size: 1.5em;
+    }
+
+    button {
+      background-color: #32cd32;
+      border: none;
+      padding: 8px;
+      margin: 8px;
+      font-size: 1.5em;
+      color: white;
+      transition: all 0.4s;
+      cursor: pointer;
+      border-radius: 8px;
+
+      &:hover {
+        background-color: #d0db36;
+        color: black;
+      }
+    }
+
+    .expand-cart {
+      margin-top: 6px;
+      border-radius: 8px;
+      transition: all 0.5s;
+      svg {
+        margin: 4px;
+        padding: 8px;
+        border-radius: 8px;
+        transition: all 0.5s;
+        line {
+          stroke: white;
+          stroke-width: 4;
+        }
+      }
+      &:hover {
+        background-color: $cart-close-hover;
+      }
+    }
   }
-  
-  .grow-cart {
-	animation: grow-cart 1s forwards;
+
+  .cart-content {
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 8px;
+      img {
+        height: 100px;
+        border-radius: 8px;
+      }
+      button {
+        font-size: 2em;
+        border-radius: 50%;
+        border: none;
+        &:hover {
+          background-color: $cart-close-hover;
+        }
+      }
+    }
   }
-  
-  @keyframes grow-cart {
-	from {
-	  height: 70px;
-	}
-  
-	to {
-	  height: 200px;
-	}
+}
+
+.grow-cart {
+  animation: grow-cart 1s forwards;
+}
+
+@keyframes grow-cart {
+  from {
+    height: 70px;
   }
-  
-  .shrink-cart {
-	animation: shrink-cart 1s forwards;
+
+  to {
+    height: 200px;
   }
-  
-  @keyframes shrink-cart {
-	from {
-	  height: 200px;
-	}
-	to {
-	  height: 70px;
-	}
+}
+
+.shrink-cart {
+  animation: shrink-cart 1s forwards;
+}
+
+@keyframes shrink-cart {
+  from {
+    height: 200px;
   }
-  
+  to {
+    height: 70px;
+  }
+}
