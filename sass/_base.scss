@@ -32,8 +32,14 @@ section {
   background-color: $section-blue;
   .item {
     box-shadow: 0px 0px 4px $contact-bg;
-    background-color: $contact-bg;
+    background-color: $secondary-item-bg;
     color: white;
+
+    .cart-button {
+      button {
+        background-color: $secondary-item-button-bg;
+      }
+    }
   }
 }
 

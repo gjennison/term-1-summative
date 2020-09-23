@@ -8,12 +8,17 @@ $contact-bg: rgb(0, 83, 122);
 $link-color: rgb(255, 233, 211);
 $link-hover: white;
 
+$button-green: #32cd32;
+
+$menu-item-bg: $navbar-bg;
+$menu-item-button-bg: $contact-bg;
+$secondary-item-bg: $contact-bg;
+$secondary-item-button-bg: $button-green;
+
 $burger-bg: rgba(0, 134, 200, 1);
 $burger-color: white;
 $burger-hover-bg: $primary;
 $burger-hover-color: white;
-
-$button-green: #32cd32;
 
 // RESPONSIVE VARIABLES
 $phone: 810px;
