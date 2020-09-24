@@ -66,7 +66,7 @@ function insertItems(array, object) {
       element.name +
       "</h4><p>$" +
       element.price +
-      "</p></div><div class='cart-button'><button onclick='addToCart(\"" +
+      "</p></div><div class='cart-button'><button class='button-primary' onclick='addToCart(\"" +
       element.src +
       '","' +
       element.name +

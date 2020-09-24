@@ -214,24 +214,6 @@ nav .container .burger div {
           justify-content: center;
 }
 
-.menu-items .item .cart-button button {
-  background-color: #00537a;
-  color: white;
-  font-size: 1.4em;
-  border-radius: 16px;
-  outline: none;
-  border: none;
-  padding: 4px;
-  padding-left: 8px;
-  padding-right: 8px;
-  cursor: pointer;
-}
-
-.menu-items .item .cart-button button:hover {
-  background-color: #d0db36;
-  color: black;
-}
-
 .menu-items .item img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -279,45 +261,6 @@ nav .container .burger div {
 
 #starter {
   padding-top: 120px;
-}
-
-#location .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 16px;
-}
-
-#location .container iframe {
-  border-radius: 20px;
-  max-width: 100%;
-}
-
-#contact {
-  background-color: #00537a;
-  color: white;
-  text-align: center;
-  padding-bottom: 150px;
-}
-
-#contact p {
-  font-size: 1.5em;
-  cursor: pointer;
-}
-
-#contact p i {
-  padding-left: 8px;
-}
-
-#contact p:hover {
-  color: gold;
 }
 
 .cart {
@@ -580,34 +523,6 @@ nav .container .burger div {
   }
 }
 
-.payment .container .payment-content button {
-  margin-top: 36px;
-  width: 100px;
-  background-color: #32cd32;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.4em;
-  padding: 0.3em;
-  color: white;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-  cursor: pointer;
-}
-
-.payment .container .payment-content button:hover {
-  background-color: #d0db36;
-  color: black;
-}
-
-.payment .container .payment-content button:first-child {
-  background-color: crimson;
-  margin-right: 4px;
-}
-
-.payment .container .payment-content button:last-child {
-  margin-left: 4px;
-}
-
 @media only screen and (max-width: 800px) {
   .payment .container .payment-content {
     width: 90%;
@@ -644,6 +559,37 @@ nav .container .burger div {
   }
 }
 
+.button-primary {
+  background-color: #32cd32;
+  color: white;
+  font-size: 1.4em;
+  border-radius: 16px;
+  outline: none;
+  border: none;
+  padding: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  cursor: pointer;
+}
+
+.button-primary:hover {
+  background-color: #d0db36;
+  color: black;
+}
+
+.secondary-section .button-primary {
+  background-color: crimson;
+}
+
+.payment button:first-child {
+  background-color: crimson;
+  margin-right: 4px;
+}
+
+.payment button:last-child {
+  margin-left: 4px;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -657,6 +603,10 @@ body {
 section {
   padding-top: 40px;
   padding-bottom: 60px;
+}
+
+button {
+  outline: none;
 }
 
 @media screen and (min-width: 810px) {
@@ -691,11 +641,42 @@ section {
   color: white;
 }
 
-.secondary-section .item .cart-button button {
-  background-color: #32cd32;
+#contact {
+  background-color: #00537a;
+  color: white;
+  text-align: center;
+  padding-bottom: 150px;
 }
 
-button {
-  outline: none;
+#contact p {
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+#contact p i {
+  padding-left: 8px;
+}
+
+#contact p:hover {
+  color: gold;
+}
+
+#location .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 16px;
+}
+
+#location .container iframe {
+  border-radius: 20px;
+  max-width: 100%;
 }
 /*# sourceMappingURL=style.css.map */

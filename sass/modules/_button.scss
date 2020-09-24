@@ -1,0 +1,30 @@
+.button-primary {
+  background-color: $button-green;
+  color: white;
+  font-size: 1.4em;
+  border-radius: 16px;
+  outline: none;
+  border: none;
+  padding: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #d0db36;
+    color: black;
+  }
+}
+
+.secondary-section .button-primary {
+  background-color: crimson;
+}
+
+.payment button:first-child {
+  background-color: crimson;
+  margin-right: 4px;
+}
+
+.payment button:last-child {
+  margin-left: 4px;
+}
